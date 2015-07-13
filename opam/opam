@@ -1,0 +1,24 @@
+opam-version: "1.2"
+name: "ocaml-bindings-generator"
+version: "0.0.1"
+homepage: "https://github.com/yallop/ocaml-bindings-generator"
+bug-reports: "https://github.com/yallop/ocaml-bindings-generator/issues"
+dev-repo: "git@github.com:yallop/ocaml-bindings-generator.git"
+maintainer: "Jeremy Yallop <yallop@gmail.com>"
+authors: [ "Jeremy Yallop <yallop@gmail.com>" ]
+license: "MIT"
+build: [
+  ["ocaml" "setup.ml" "-configure" "--prefix" prefix]
+  ["ocaml" "setup.ml" "-build"]
+]
+build-test: [
+  ["ocaml" "setup.ml" "-configure" "--enable-tests"]
+  ["ocaml" "setup.ml" "-build"]
+  ["ocaml" "setup.ml" "-test"]
+]
+depends: [
+  "cil"
+  "cmdliner"
+  "humane-re"
+  "ocamlfind" {build}
+]

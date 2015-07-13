@@ -1,0 +1,4 @@
+bin: [
+  "?_build/src/ocaml_bindings_generator.byte" {"ocaml-bindings-generator"}
+  "?_build/src/ocaml_bindings_generator.native" {"ocaml-bindings-generator"}
+]

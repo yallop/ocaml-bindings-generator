@@ -1,0 +1,14 @@
+OASISFormat: 0.4
+Name:        ocaml-bindings-generator
+Version:     0.0.1
+Synopsis:    A C bindings generator for OCaml
+Authors:     Jeremy Yallop <yallop@gmail.com>
+License:     MIT
+Plugins:     DevFiles (0.4)
+
+Executable "ocaml-bindings-generator"
+  Path:         src
+  BuildTools:   ocamlbuild
+  MainIs:       ocaml_bindings_generator.ml
+  BuildDepends: cil,humane_re,cmdliner
+  CompiledObject: best

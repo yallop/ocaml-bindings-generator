@@ -1,0 +1,24 @@
+# OASIS_START
+# DO NOT EDIT (digest: e8ae3dac21d434eb602bab01b994ed34)
+# Ignore VCS directories, you can use the same kind of rule outside
+# OASIS_START/STOP if you want to exclude directories that contains
+# useless stuff for the build process
+true: annot, bin_annot
+<**/.svn>: -traverse
+<**/.svn>: not_hygienic
+".bzr": -traverse
+".bzr": not_hygienic
+".hg": -traverse
+".hg": not_hygienic
+".git": -traverse
+".git": not_hygienic
+"_darcs": -traverse
+"_darcs": not_hygienic
+# Executable ocaml-bindings-generator
+<src/ocaml_bindings_generator.{native,byte}>: pkg_cil
+<src/ocaml_bindings_generator.{native,byte}>: pkg_cmdliner
+<src/ocaml_bindings_generator.{native,byte}>: pkg_humane_re
+<src/*.ml{,i,y}>: pkg_cil
+<src/*.ml{,i,y}>: pkg_cmdliner
+<src/*.ml{,i,y}>: pkg_humane_re
+# OASIS_STOP
